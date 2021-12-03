@@ -241,6 +241,10 @@ textarea {
 .footer > ul {
   margin-top: 2rem;
 }
+.icons {
+  width: 30px;
+  height: 30px;
+}
 @media screen and (min-width: 600px) {
   img {
     height: 40vh;
