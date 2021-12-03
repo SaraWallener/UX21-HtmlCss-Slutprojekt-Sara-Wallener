@@ -1,0 +1,355 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+  list-style-type: none;
+}
+
+body {
+  display: grid;
+  width: 100vw;
+  grid: "navbar" "header" "portfolio" "contact" "footer";
+  overflow-x: hidden;
+  background: #000000;
+  color: whitesmoke;
+}
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: #e1dcd9;
+}
+
+.navbar-link:hover {
+  color: #aaa5a0;
+}
+li {
+  display: inline-block;
+}
+
+.navbar {
+  grid-area: navbar;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3e3c3c;
+  height: 5vh;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.header {
+  grid-area: header;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5vh 0 5vh 0;
+}
+.round-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.head-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.head-title > p {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-left: 1em;
+}
+.txt {
+  color: #ffffff;
+  background: #000000;
+  font-size: 1.3rem;
+  padding: 0.1rem;
+  font-weight: bold;
+  font-family: Arial;
+  text-transform: uppercase;
+}
+.txt::before {
+  content: "Sara Wallener";
+  position: absolute;
+  mix-blend-mode: difference;
+  filter: blur(1px);
+}
+.neon-wrapper {
+  margin-left: 0.5em;
+  filter: brightness(250%);
+  overflow: hidden;
+}
+.gradient {
+  background: linear-gradient(
+    114.5793141156962deg,
+    #a67f78 4.927083333333334%,
+    rgba(229, 151, 64, 1) 97.84374999999999%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+}
+.dodge {
+  background: radial-gradient(circle, white, black 35%) center / 25% 25%;
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  right: 0;
+  bottom: 0;
+  mix-blend-mode: color-dodge;
+  animation: dodge-area 3s linear infinite;
+}
+.head-text {
+  margin: 0 5vw 0 10vw;
+}
+.btn-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+.btn {
+  background-color: #3e3c3c;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 0.4em;
+  color: whitesmoke;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1em 0.7em;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+}
+.btn:hover {
+  background-color: #537499;
+  cursor: pointer;
+}
+
+.portfolio {
+  grid-area: portfolio;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.text-field {
+  line-height: 1.5em;
+  margin: 10vh 0 10vh 0;
+}
+.text-field > p {
+  font-size: 0.9rem;
+  opacity: 50%;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin-bottom: 5vh;
+}
+img {
+  height: 50vh;
+  width: 60vw;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 2rem 0 2rem 0;
+  width: 60vw;
+}
+.portfolio_bottom-text {
+  padding: 2rem;
+  font-size: 0.8em;
+}
+.btn-portfolio {
+  margin-top: 5vh;
+  width: 70vw;
+  padding: 1em;
+}
+.contact {
+  grid-area: contact;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #3e3c3c;
+}
+.contact-field {
+  color: whitesmoke;
+  text-align: center;
+  line-height: 2em;
+  margin: 2vh 0 5vh 0;
+}
+.contact-field > p {
+  opacity: 50%;
+  font-size: 0.7rem;
+}
+.form {
+  margin: 0 3vw 0 3vw;
+}
+
+.btn-clear {
+  border: 0.1em solid whitesmoke;
+}
+.btn-clear:hover {
+  background: rgba(209, 209, 209, 0.2);
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+input,
+textarea {
+  width: 90vw;
+  background: #242222;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  color: rgba(209, 209, 209, 0.2);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn-send {
+  background: rgb(11, 106, 138);
+  margin-bottom: 0.3em;
+}
+
+.footer {
+  grid-area: footer;
+  padding: 2rem;
+  background: #3e3c3c;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.footer > h5 {
+  color: whitesmoke;
+  font-size: 1.4rem;
+}
+.footer > ul {
+  margin-top: 2rem;
+}
+@media screen and (min-width: 600px) {
+  img {
+    height: 40vh;
+    width: 30vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+  }
+  .top-container {
+    display: grid;
+    grid: "image title auto" "... text..." "... button ...";
+    width: 70vw;
+  }
+
+  .image-container {
+    grid-area: image;
+    display: flex;
+    width: 30vw;
+    justify-content: center;
+  }
+  .round-image {
+    width: 300px;
+    height: 300px;
+  }
+  .head-title {
+    grid-area: title;
+    position: relative;
+    top: 5vh;
+    right: 10vw;
+    padding: 0;
+    width: 30vw;
+  }
+  .txt {
+    font-size: 2em;
+  }
+  .head-text {
+    grid-area: text;
+    position: relative;
+    right: 15vw;
+    top: -15vh;
+    width: 30vw;
+  }
+  .btn-wrap {
+    grid-area: button;
+    position: relative;
+    top: -10vh;
+    right: 18vw;
+  }
+
+  .cards {
+    display: flex;
+    width: 60vw;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .container {
+    width: 20vw;
+  }
+  .container > h4 {
+    padding: 1em;
+  }
+  img {
+    height: 60vh;
+    width: 18vw;
+  }
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    height: 5vh;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .portfolio {
+    margin-bottom: 35vh;
+  }
+  .neon-wrapper {
+    margin-left: 0.5em;
+  }
+  .contact {
+    height: 70vh;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  input,
+  textarea {
+    width: 40vw;
+  }
+  textarea {
+    margin-bottom: 2vw;
+  }
+}
+
+@keyframes dodge-area {
+  to {
+    transform: translate(50%, 50%);
+  }
+}
