@@ -245,6 +245,14 @@ textarea {
   width: 30px;
   height: 30px;
 }
+
+#text-link {
+  color: #aaa5a0;
+}
+#text-link:hover {
+  color: whitesmoke;
+}
+
 @media screen and (min-width: 600px) {
   img {
     height: 40vh;
