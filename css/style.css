@@ -69,17 +69,17 @@ li {
 }
 .txt {
   color: #ffffff;
-  background: #000000;
+  /* background: #000000; */
   font-size: 1.3rem;
   padding: 0.1rem;
   font-weight: bold;
   font-family: Arial;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .txt::before {
   content: "Sara Wallener";
   position: absolute;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
   filter: blur(1px);
 }
 .neon-wrapper {
@@ -360,8 +360,8 @@ textarea {
   }
 }
 
-@keyframes dodge-area {
+/* @keyframes dodge-area {
   to {
     transform: translate(50%, 50%);
   }
-}
+} */
